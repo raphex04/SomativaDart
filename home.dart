@@ -1,17 +1,17 @@
-import 'home.dart';
 import 'imc.dart';
 import 'contador.dart';
 import 'cadastro_produtos.dart';
-import 'cadastro_produtos.dart';
+import 'cadastro_usuario.dart';
 import 'package:flutter/material.dart';
 
+class Home extends StatefulWidget {
+  const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomePageState();
+}
 
-
-class Principal1 extends StatelessWidget {
-  const Principal1({super.key});
-
-
+class _HomePageState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,43 +47,27 @@ class Principal1 extends StatelessWidget {
                   ElevatedButton(
                       child: const Text("IMC"),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const imc()),
-                        );
+                        Navigator.pushNamed(context, '/imc');
                       }),
                   ElevatedButton(
                       child: const Text("Contador"),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const contador()),
-                        );
+                        Navigator.pushNamed(context, '/contador');
                       }),
                   ElevatedButton(
                       child: const Text("Cadastro Usuario"),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const cadastro_usuario()),
-                        );
+                        Navigator.pushNamed(context, '/CadastroUser');
                       }),
                   ElevatedButton(
                       child: const Text("Cadastro de produtos"),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const cadastro_produtos()),
-                        );
+                        Navigator.pushNamed(context, '/CadastroProduto');
                       }),
                 ]),
           ],
         ),
-      ),
+      ), // Botão para executar o calculo do IMC,
     );
   }
 }
