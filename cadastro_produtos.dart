@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'cadastroproduto.dart';
+import 'cadastro_produtos.dart';
 
 class cadastroproduto5 extends StatelessWidget {
   const cadastroproduto5({super.key});
